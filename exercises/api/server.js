@@ -29,7 +29,10 @@ const server = http.createServer((req, res) => {
     res.end()
   } else {
     // missing asset should not cause server crash
-    throw new Error('route not found')
+    // throw new Error('route not found')
+    res.writeHead(404, {'Content-Type': 'text/html'})
+    res.write("not found");
+    logRequest(method, route, 404)
     res.end()
   }
   // most important part, send down the asset
