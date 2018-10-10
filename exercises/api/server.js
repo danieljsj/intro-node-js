@@ -14,8 +14,10 @@ const findAsset = (name) => {
     return fs.readFile(assetPath, {encoding: 'utf-8'}, (error, result) => { // callbacks always have error, result
       if (error) {
         reject(error);
+        // error() registers a func to the promise to be called when the promise is reject()ed
       } else {
         resolve(result.toString());
+        // .then() registers a func to the promise to be called when the promise is resolve()d
       }
     })
   })
