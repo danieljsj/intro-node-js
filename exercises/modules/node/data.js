@@ -8,6 +8,7 @@ const posts = [
     {title: 'My doggy', body: 'my dog is better than yours', createdBy: 1}
 ];
 
+
 module.exports = {
     users,
     posts
