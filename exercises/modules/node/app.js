@@ -21,7 +21,7 @@ showUserProfile = (userId, cb) => {
         ${user.name}
       </div>
     `
-    cb(profile)
+    cb(profile);
   })
 }
 
