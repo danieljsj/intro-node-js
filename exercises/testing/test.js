@@ -20,7 +20,7 @@ describe('users', () => {
       const deletedUser = await deleteUser(user.id)
       expect(deletedUser.id).toBe(1)
       try {
-        await findUser(1)
+        const user = await findUser(1)
       } catch(e) {
         expect(e).toBeTruthy()
       }

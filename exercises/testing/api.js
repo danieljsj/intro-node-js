@@ -15,7 +15,7 @@ app.get('/user/:id', async (req, res) => {
   res.status(200).send(user)
 })
 
-app.delete('/user/:id', (req, res) => {
+app.delete('/user/:id', async (req, res) => {
   const id = req.id
   await users.deleteUser(id)
   res.status(201).send({id})
